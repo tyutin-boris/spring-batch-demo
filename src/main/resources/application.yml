@@ -1,1 +1,15 @@
-
+spring:
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: false
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  docker:
+    compose:
+      file: docker-compose.yml
+server:
+  port: 9090

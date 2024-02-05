@@ -1,9 +1,10 @@
 services:
   postgres:
-    image: 'postgres:latest'
+    image: 'postgres:16-alpine'
+    container_name: 'sbpsql'
     environment:
-      - 'POSTGRES_DB=mydatabase'
-      - 'POSTGRES_PASSWORD=secret'
-      - 'POSTGRES_USER=myuser'
+      - 'POSTGRES_DB=test'
+      - 'POSTGRES_PASSWORD=user'
+      - 'POSTGRES_USER=user'
     ports:
-      - '5432'
+      - '5432:5432'
