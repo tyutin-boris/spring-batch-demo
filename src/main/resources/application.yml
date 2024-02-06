@@ -3,7 +3,8 @@ spring:
     jdbc:
       initialize-schema: always
     job:
-      enabled: false
+      enabled: true
+      name: 'dialoguesLoaderJob'
   jpa:
     show-sql: true
     hibernate:
@@ -11,5 +12,10 @@ spring:
   docker:
     compose:
       file: docker-compose.yml
+      enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test
+    username: user
+    password: user
 server:
   port: 9090

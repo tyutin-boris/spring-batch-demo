@@ -50,6 +50,7 @@ public class SpringBatchConfig {
                 .listener(dialogChunkListener)
                 .listener(dialogReadListener)
                 .listener(dialogWriteListener)
+                .allowStartIfComplete(true)
                 .build();
     }
 
